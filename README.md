@@ -1,9 +1,9 @@
-# Kerala-IOT-challenge
+# Kerala IOT Challenge
 
 >Foxlab Makerspace in association with GTech - Group of Technology Companies in Kerala is launching our prestigious program “Kerala IoT Challenge 2021”, with a vision to mould 100 IoT experts in Kerala, hosting on the µLearn platform. Kerala IoT Challenge is a program designed in 4 levels followed by a hackathon to identify and train quality industry leaders in the IoT domain, while any novice learner can start with layer 1 and others can enter laterally to the desired layer after an evaluation.#
 
 # About Me
-Hello guyus..,
+>Hello guyus..,
 My name is Basil Sabu
 I am a second year BTech Electronics and Communication student studying at [College of Engineering Kidangooring](https://www.ce-kgr.org)
 
@@ -25,7 +25,7 @@ delay(1000); // wait for a second
 }
 ```
 
-##Experiment 2 - Traffic Light
+## Experiment 2 - Traffic Light
 
 
 ### code
@@ -57,3 +57,65 @@ delay(5000);// wait 5 seconds
 digitalWrite(redled, LOW);// turn off red LED
 }
 ```
+
+## Experiment 3 - LED Chasing Effect
+
+### code
+```int BASE = 2 ;  // the I/O pin for the first LED
+int NUM = 6;   // number of LEDs
+void setup()
+{
+   for (int i = BASE; i < BASE + NUM; i ++) 
+   {
+     pinMode(i, OUTPUT);   // set I/O pins as output
+   }
+}
+void loop()
+{
+   for (int i = BASE; i < BASE + NUM; i ++) 
+   {
+     digitalWrite(i, LOW);    // set I/O pins as “low”, turn off LEDs one by one.
+     delay(200);        // delay
+   }
+   for (int i = BASE; i < BASE + NUM; i ++) 
+   {
+     digitalWrite(i, HIGH);    // set I/O pins as “high”, turn on LEDs one by one
+     delay(200);        // delay
+   }  
+}
+```
+
+## Experment 4 - Button Controlled LED
+
+### code
+
+```int ledpin=11;// initialize pin 11
+int inpin=7;// initialize pin 7
+int val;// define val
+void setup()
+{
+pinMode(ledpin,OUTPUT);// set LED pin as “output”
+pinMode(inpin,INPUT);// set button pin as “input”
+}
+void loop()
+{
+val=digitalRead(inpin);// read the level value of pin 7 and assign if to val
+if(val==LOW)// check if the button is pressed, if yes, turn on the LED
+{ digitalWrite(ledpin,LOW);}
+else
+{ digitalWrite(ledpin,HIGH);}
+}
+```
+
+## Experment 5 - Buzzer
+
+### code
+```int buzzer=8;// initialize digital IO pin that controls the buzzer
+void setup() 
+{ 
+  pinMode(buzzer,OUTPUT);// set pin mode as “output”
+} 
+void loop() 
+{
+digitalWrite(buzzer, HIGH); // produce sound
+}```
