@@ -5,7 +5,7 @@
 # About Me
 
 ## code
-'''c++
+```
 int ledPin = 10; // define digital pin 10.
 void setup()
 {
@@ -18,4 +18,4 @@ delay(1000); // wait for a second.
 digitalWrite(ledPin, LOW); // set the LED off.
 delay(1000); // wait for a second
 }
-'''
+```
