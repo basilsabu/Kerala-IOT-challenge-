@@ -27,7 +27,7 @@ delay(1000); // wait for a second
 ```
 
 ## Experiment 2 - Traffic Light
-
+![Traffic Light](https://user-images.githubusercontent.com/70280105/131755398-e7cd6fd7-10be-4a5b-87c2-b43000f952f6.jpg)
 
 ### code
 ```int redled =10; // initialize digital pin 8.
