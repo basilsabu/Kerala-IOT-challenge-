@@ -9,7 +9,7 @@ I am a second year BTech Electronics and Communication student studying at [Coll
 
 # Experiment 1 - Hello World LED Blinking
 
-####### code
+###### code
 ```
 int ledPin = 10; // define digital pin 10.
 void setup()
