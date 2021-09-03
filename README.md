@@ -60,6 +60,8 @@ digitalWrite(redled, LOW);// turn off red LED
 ```
 
 ## Experiment 3 - LED Chasing Effect
+![LED Chasing Effect](https://user-images.githubusercontent.com/70280105/131970500-139c6893-04d1-4e06-9de0-81385b943fd2.jpg)
+
 
 ### code
 ```int BASE = 2 ;  // the I/O pin for the first LED
