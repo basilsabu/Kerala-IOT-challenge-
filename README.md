@@ -112,6 +112,7 @@ else
 ```
 
 ## Experment 5 - Buzzer
+![Buzzer](https://user-images.githubusercontent.com/70280105/132118077-416d0941-d266-4012-93ed-2b64038c3542.png)
 
 ### code
 ```int buzzer=8;// initialize digital IO pin that controls the buzzer
