@@ -209,6 +209,7 @@ void loop()
 ```
 
 ## Experment 9 - LM35 Temperature Sensor
+![LM35 Temperature Sensor](https://user-images.githubusercontent.com/70280105/132118621-f9831e93-e978-4b4b-8776-9540c04e7ae0.png)
 
 ### cod
 ``` potPin = 0; // initialize analog pin 0 for LM35 temperature sensor
