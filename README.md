@@ -159,6 +159,7 @@ for(val=0; val<255; val++)
 ```
 
 ## Experment 7 - LDR Light Sensor
+![LDR Light Sensor](https://user-images.githubusercontent.com/70280105/132117799-b2757ef4-8eae-4785-830a-d3196ec44128.jpg)
 
 ### code
 ```int potpin=0;// initialize analog pin 0, connected with photovaristor
