@@ -126,6 +126,7 @@ digitalWrite(buzzer, HIGH); // produce sound
 ```
 
 ## Experment 6 - RGB LED
+![RGB LED](https://user-images.githubusercontent.com/70280105/132117858-1bbfbb87-dfa4-4b06-9e12-23f19dee9f36.png)
 
 ### code
 ```int redpin = 11; //select the pin for the red LED
