@@ -160,6 +160,7 @@ for(val=0; val<255; val++)
  Serial.println(val, DEC);
 }
 ```
+https://user-images.githubusercontent.com/70280105/132246788-081b32aa-67a9-4069-90fa-c067f382fa5d.mp4
 
 ## Experment 7 - LDR Light Sensor
 ![LDR Light Sensor](https://user-images.githubusercontent.com/70280105/132117799-b2757ef4-8eae-4785-830a-d3196ec44128.jpg)
