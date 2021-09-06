@@ -532,3 +532,4 @@ digital_9();// display number 9
 delay(1000); // wait for 1s
 }}
 ```
+https://user-images.githubusercontent.com/70280105/132247575-3433d564-1d7c-4f61-8d52-7e469b559000.mp4
