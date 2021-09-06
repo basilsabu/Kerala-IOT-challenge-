@@ -125,6 +125,7 @@ void loop()
 digitalWrite(buzzer, HIGH); // produce sound
 }
 ```
+https://user-images.githubusercontent.com/70280105/132246282-c3ca1ca3-ccd3-42f0-9dc3-a0805f8cc554.mp4
 
 ## Experment 6 - RGB LED
 ![RGB LED](https://user-images.githubusercontent.com/70280105/132117858-1bbfbb87-dfa4-4b06-9e12-23f19dee9f36.png)
