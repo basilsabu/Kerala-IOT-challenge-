@@ -230,6 +230,8 @@ Serial.println("C");// display “C” characters
 delay(500);// wait for 0.5 second
 }
 ```
+https://user-images.githubusercontent.com/70280105/132246634-4bd39ac6-c081-4f4b-bd3b-f0f2048f836c.mp
+
 ## Experment 10 - IR Remote Control Using TSOP
 
 ### code
