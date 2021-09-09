@@ -536,7 +536,52 @@ https://user-images.githubusercontent.com/70280105/132247575-3433d564-1d7c-4f61-
 
 ## IoT Challenge Assignments
 
-### Create a Digital Dice using 7 Segment Display and Push Button
+### Create a Thermometer using 6 LEDs and 1 LM35 Temperature Sensor
+
+## code
+```
+void setup()
+{
+  pinMode(A5, INPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(6, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+}
+
+void loop()
+{
+  if (-40 + 0.488155 * (analogRead(A5) - 20) >= -40) {
+    digitalWrite(3, HIGH);
+  }
+  digitalWrite(3, LOW);
+  if (-40 + 0.488155 * (analogRead(A5) - 20) >= -10) {
+    digitalWrite(4, HIGH);
+  }
+  digitalWrite(4, LOW);
+  if (-40 + 0.488155 * (analogRead(A5) - 20) >= 20) {
+    digitalWrite(5, HIGH);
+  }
+  digitalWrite(5, LOW);
+  if (-40 + 0.488155 * (analogRead(A5) - 20) >= 50) {
+    digitalWrite(6, HIGH);
+  }
+  digitalWrite(6, LOW);
+  if (-40 + 0.488155 * (analogRead(A5) - 20) >= 80) {
+    digitalWrite(7, HIGH);
+  }
+  digitalWrite(7, LOW);
+  if (-40 + 0.488155 * (analogRead(A5) - 20) >= 120) {
+    digitalWrite(8, HIGH);
+  }
+  digitalWrite(8, LOW);
+  delay(10);
+}
+```
+
+### ? Create a Digital Dice using 7 Segment Display and Push Button
 
 ## code
 ```
