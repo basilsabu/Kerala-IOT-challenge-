@@ -209,6 +209,7 @@ void loop()
    delay(500); 
 }
 ```
+https://user-images.githubusercontent.com/70280105/132765022-f5c11092-09ed-46e3-9732-43ed9e2bfa2e.mp4
 
 ## Experment 9 - LM35 Temperature Sensor
 ![LM35 Temperature Sensor](https://user-images.githubusercontent.com/70280105/132118621-f9831e93-e978-4b4b-8776-9540c04e7ae0.png)
