@@ -8,7 +8,6 @@ My name is Basil Sabu
 I am a second year BTech Electronics and Communication student studying at [College of Engineering Kidangooring](https://www.ce-kgr.org)
 
 ## Experiment 1 - Hello World LED Blinking
-![hello world](https://user-images.githubusercontent.com/70280105/131733910-0231fa02-ad37-44f9-9202-56519bfaa574.jpg)
 
 ### code
 ```
@@ -26,8 +25,9 @@ delay(1000); // wait for a second
 }
 ```
 
+![hello world](https://user-images.githubusercontent.com/70280105/131733910-0231fa02-ad37-44f9-9202-56519bfaa574.jpg)
+
 ## Experiment 2 - Traffic Light
-![Traffic Light](https://user-images.githubusercontent.com/70280105/131755398-e7cd6fd7-10be-4a5b-87c2-b43000f952f6.jpg)
 
 ### code
 ```int redled =10; // initialize digital pin 8.
@@ -59,6 +59,8 @@ digitalWrite(redled, LOW);// turn off red LED
 }
 ```
 
+![Traffic Light](https://user-images.githubusercontent.com/70280105/131755398-e7cd6fd7-10be-4a5b-87c2-b43000f952f6.jpg)
+
 ## Experiment 3 - LED Chasing Effect
 
 ### code
@@ -86,6 +88,8 @@ void loop()
 }
 ```
 ![LED Chasing Effect](https://user-images.githubusercontent.com/70280105/131970500-139c6893-04d1-4e06-9de0-81385b943fd2.jpg)
+
+https://user-images.githubusercontent.com/70280105/132772254-72a55355-89f1-4e5a-bb67-bd74d476a023.mp4
 
 ## Experment 4 - Button Controlled LED
 
@@ -217,7 +221,6 @@ void loop()
 https://user-images.githubusercontent.com/70280105/132765022-f5c11092-09ed-46e3-9732-43ed9e2bfa2e.mp4
 
 ## Experment 9 - LM35 Temperature Sensor
-![LM35 Temperature Sensor](https://user-images.githubusercontent.com/70280105/132118621-f9831e93-e978-4b4b-8776-9540c04e7ae0.png)
 
 ### cod
 ``` potPin = 0; // initialize analog pin 0 for LM35 temperature sensor
@@ -237,6 +240,8 @@ Serial.println("C");// display “C” characters
 delay(500);// wait for 0.5 second
 }
 ```
+![LM35 Temperature Sensor](https://user-images.githubusercontent.com/70280105/132118621-f9831e93-e978-4b4b-8776-9540c04e7ae0.png)
+
 https://user-images.githubusercontent.com/70280105/132246634-4bd39ac6-c081-4f4b-bd3b-f0f2048f836c.mp
 
 ## Experment 10 - IR Remote Control Using TSOP
