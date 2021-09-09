@@ -533,3 +533,359 @@ delay(1000); // wait for 1s
 }}
 ```
 https://user-images.githubusercontent.com/70280105/132247575-3433d564-1d7c-4f61-8d52-7e469b559000.mp4
+
+## IoT Challenge Assignments
+
+### Create a Digital Dice using 7 Segment Display and Push Button
+
+## code
+```
+unsigned const int A = 13;
+unsigned const int B = 12;
+unsigned const int C = 11;
+unsigned const int D = 10;
+unsigned const int E = 9;
+unsigned const int F = 8;
+unsigned const int G = 7;
+
+
+unsigned const int H = 0;
+unsigned const int I = 1;
+unsigned const int J = 2;
+unsigned const int K = 3;
+unsigned const int L = 6;
+unsigned const int M = 5;
+unsigned const int N = 4;
+
+
+int b1 = A5;
+int b1s;
+int digit;
+
+void setup(void)
+{
+  pinMode(A, OUTPUT);
+  pinMode(B, OUTPUT);
+  pinMode(C, OUTPUT);
+  pinMode(D, OUTPUT);
+  pinMode(E, OUTPUT);
+  pinMode(F, OUTPUT);
+  pinMode(G, OUTPUT);
+  pinMode(H, OUTPUT);
+  
+  pinMode(H, OUTPUT);
+  pinMode(I, OUTPUT);
+  pinMode(J, OUTPUT);
+  pinMode(K, OUTPUT);
+  pinMode(L, OUTPUT);
+  pinMode(M, OUTPUT);
+  pinMode(N, OUTPUT);
+  
+  pinMode(b1, INPUT_PULLUP);
+  
+  randomSeed(analogRead(0));
+}
+
+//My Functions
+
+void zero(void) {
+  digitalWrite(A, LOW);
+  digitalWrite(B, HIGH);
+  digitalWrite(C, HIGH);
+  digitalWrite(D, HIGH);
+  digitalWrite(E, HIGH);
+  digitalWrite(F, HIGH);
+  digitalWrite(G, HIGH);
+  digitalWrite(H, LOW);
+}
+
+void one(void) {
+  digitalWrite(A, LOW);
+  digitalWrite(B, LOW);
+  digitalWrite(C, LOW);
+  digitalWrite(D, HIGH);
+  digitalWrite(E, LOW);
+  digitalWrite(F, LOW);
+  digitalWrite(G, HIGH);
+  digitalWrite(H, LOW);
+}
+
+void two(void) {
+  digitalWrite(A, HIGH);
+  digitalWrite(B, LOW);
+  digitalWrite(C, HIGH);
+  digitalWrite(D, HIGH);
+  digitalWrite(E, HIGH);
+  digitalWrite(F, HIGH);
+  digitalWrite(G, LOW);
+  digitalWrite(H, LOW);
+}
+
+void three(void) {
+  digitalWrite(A, HIGH);
+  digitalWrite(B, LOW);
+  digitalWrite(C, HIGH);
+  digitalWrite(D, HIGH);
+  digitalWrite(E, LOW);
+  digitalWrite(F, HIGH);
+  digitalWrite(G, HIGH);
+  digitalWrite(H, LOW);
+}
+
+void four(void) {
+  digitalWrite(A, HIGH);
+  digitalWrite(B, HIGH);
+  digitalWrite(C, LOW);
+  digitalWrite(D, HIGH);
+  digitalWrite(E, LOW);
+  digitalWrite(F, LOW);
+  digitalWrite(G, HIGH);
+  digitalWrite(H, LOW);
+}
+
+void five(void) {
+  digitalWrite(A, HIGH);
+  digitalWrite(B, HIGH);
+  digitalWrite(C, HIGH);
+  digitalWrite(D, LOW);
+  digitalWrite(E, LOW);
+  digitalWrite(F, HIGH);
+  digitalWrite(G, HIGH);
+  digitalWrite(H, LOW);
+}
+
+void six(void) {
+  digitalWrite(A, HIGH);
+  digitalWrite(B, HIGH);
+  digitalWrite(C, HIGH);
+  digitalWrite(D, LOW);
+  digitalWrite(E, HIGH);
+  digitalWrite(F, HIGH);
+  digitalWrite(G, HIGH);
+  digitalWrite(H, LOW);
+}
+
+void seven(void) {
+  digitalWrite(A, LOW);
+  digitalWrite(B, LOW);
+  digitalWrite(C, HIGH);
+  digitalWrite(D, HIGH);
+  digitalWrite(E, LOW);
+  digitalWrite(F, LOW);
+  digitalWrite(G, HIGH);
+  digitalWrite(H, LOW);
+}
+
+void eight(void) {
+  digitalWrite(A, HIGH);
+  digitalWrite(B, HIGH);
+  digitalWrite(C, HIGH);
+  digitalWrite(D, HIGH);
+  digitalWrite(E, HIGH);
+  digitalWrite(F, HIGH);
+  digitalWrite(G, HIGH);
+  digitalWrite(H, LOW);
+}
+
+void nine(void) {
+  digitalWrite(A, HIGH);
+  digitalWrite(B, HIGH);
+  digitalWrite(C, HIGH);
+  digitalWrite(D, HIGH);
+  digitalWrite(E, LOW);
+  digitalWrite(F, HIGH);
+  digitalWrite(G, HIGH);
+  digitalWrite(H, LOW);
+}
+
+
+
+
+void zero2(void) {
+  digitalWrite(H, LOW);
+  digitalWrite(I, HIGH);
+  digitalWrite(J, HIGH);
+  digitalWrite(K, HIGH);
+  digitalWrite(L, HIGH);
+  digitalWrite(M, HIGH);
+  digitalWrite(N, HIGH);
+}
+
+void one2(void) {
+  digitalWrite(H, LOW);
+  digitalWrite(I, LOW);
+  digitalWrite(J, LOW);
+  digitalWrite(K, HIGH);
+  digitalWrite(L, LOW);
+  digitalWrite(M, LOW);
+  digitalWrite(N, HIGH);
+}
+
+void two2(void) {
+  digitalWrite(H, HIGH);
+  digitalWrite(I, LOW);
+  digitalWrite(J, HIGH);
+  digitalWrite(K, HIGH);
+  digitalWrite(L, HIGH);
+  digitalWrite(M, HIGH);
+  digitalWrite(N, LOW);
+}
+
+void three2(void) {
+  digitalWrite(H, HIGH);
+  digitalWrite(I, LOW);
+  digitalWrite(J, HIGH);
+  digitalWrite(K, HIGH);
+  digitalWrite(L, LOW);
+  digitalWrite(M, HIGH);
+  digitalWrite(N, HIGH);
+
+}
+
+void four2(void) {
+  digitalWrite(H, HIGH);
+  digitalWrite(I, HIGH);
+  digitalWrite(J, LOW);
+  digitalWrite(K, HIGH);
+  digitalWrite(L, LOW);
+  digitalWrite(M, LOW);
+  digitalWrite(N, HIGH);
+
+}
+
+void five2(void) {
+  digitalWrite(H, HIGH);
+  digitalWrite(I, HIGH);
+  digitalWrite(J, HIGH);
+  digitalWrite(K, LOW);
+  digitalWrite(L, LOW);
+  digitalWrite(M, HIGH);
+  digitalWrite(N, HIGH);
+
+}
+
+void six2(void) {
+  digitalWrite(H, HIGH);
+  digitalWrite(I, HIGH);
+  digitalWrite(J, HIGH);
+  digitalWrite(K, LOW);
+  digitalWrite(L, HIGH);
+  digitalWrite(M, HIGH);
+  digitalWrite(N, HIGH);
+
+}
+
+void seven2(void) {
+  digitalWrite(H, LOW);
+  digitalWrite(I, LOW);
+  digitalWrite(J, HIGH);
+  digitalWrite(K, HIGH);
+  digitalWrite(L, LOW);
+  digitalWrite(M, LOW);
+  digitalWrite(N, HIGH);
+}
+
+void eight2(void) {
+  digitalWrite(H, HIGH);
+  digitalWrite(I, HIGH);
+  digitalWrite(J, HIGH);
+  digitalWrite(K, HIGH);
+  digitalWrite(L, HIGH);
+  digitalWrite(M, HIGH);
+  digitalWrite(N, HIGH);
+
+}
+
+void nine2(void) {
+  digitalWrite(H, HIGH);
+  digitalWrite(I, HIGH);
+  digitalWrite(J, HIGH);
+  digitalWrite(K, HIGH);
+  digitalWrite(L, LOW);
+  digitalWrite(M, HIGH);
+  digitalWrite(N, HIGH);
+
+}
+
+void displayDigit(int digit) {
+ 
+    if (digit == 0) {
+        zero();
+
+    } else if (digit == 1) {
+       one();
+
+    } else if (digit == 2) {
+       two();
+
+    } else if (digit == 3) {
+       three();
+
+    } else if (digit == 4) {
+       four();
+
+    } else if (digit == 5) { 
+       five();
+
+    } else if (digit == 6) {
+       six();
+
+    } else if (digit == 7) {
+       seven(); 
+
+    } else if (digit == 8) {
+       eight();
+
+    } else if (digit == 9) {
+        nine();
+    }
+    }
+  
+void displayDigit2(int digit2) {
+ 
+    if (digit2 == 0) {
+        zero2();
+
+    } else if (digit2 == 1) {
+       one2();
+
+    } else if (digit2 == 2) {
+       two2();
+
+    } else if (digit2 == 3) {
+       three2();
+
+    } else if (digit2 == 4) {
+       four2();
+
+    } else if (digit2 == 5) { 
+       five2();
+
+    } else if (digit2 == 6) {
+       six();
+
+    } else if (digit2 == 7) {
+       seven2(); 
+
+    } else if (digit2 == 8) {
+       eight2();
+
+    } else if (digit2 == 9) {
+        nine2();
+    }
+    }
+  
+
+// Start
+void loop(void)
+{
+  b1s = digitalRead(b1);
+  if (b1s == LOW) {
+ 
+  int digit = random(1, 9);
+  int digit2 = random(0,9);
+  displayDigit(digit); 
+  displayDigit2(digit2);
+  }
+}
+```
