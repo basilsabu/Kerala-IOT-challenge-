@@ -60,8 +60,6 @@ digitalWrite(redled, LOW);// turn off red LED
 ```
 
 ## Experiment 3 - LED Chasing Effect
-![LED Chasing Effect](https://user-images.githubusercontent.com/70280105/131970500-139c6893-04d1-4e06-9de0-81385b943fd2.jpg)
-
 
 ### code
 ```int BASE = 2 ;  // the I/O pin for the first LED
@@ -87,6 +85,7 @@ void loop()
    }  
 }
 ```
+![LED Chasing Effect](https://user-images.githubusercontent.com/70280105/131970500-139c6893-04d1-4e06-9de0-81385b943fd2.jpg)
 
 ## Experment 4 - Button Controlled LED
 
@@ -114,7 +113,6 @@ else
 https://user-images.githubusercontent.com/70280105/132771756-983e767d-e4eb-4b8b-b4fd-7866f6126f31.mp4
 
 ## Experment 5 - Buzzer
-![Buzzer](https://user-images.githubusercontent.com/70280105/132118077-416d0941-d266-4012-93ed-2b64038c3542.png)
 
 ### code
 ```int buzzer=8;// initialize digital IO pin that controls the buzzer
@@ -127,10 +125,11 @@ void loop()
 digitalWrite(buzzer, HIGH); // produce sound
 }
 ```
+![Buzzer](https://user-images.githubusercontent.com/70280105/132118077-416d0941-d266-4012-93ed-2b64038c3542.png)
+
 https://user-images.githubusercontent.com/70280105/132246282-c3ca1ca3-ccd3-42f0-9dc3-a0805f8cc554.mp4
 
 ## Experment 6 - RGB LED
-![RGB LED](https://user-images.githubusercontent.com/70280105/132117858-1bbfbb87-dfa4-4b06-9e12-23f19dee9f36.png)
 
 ### code
 ```int redpin = 11; //select the pin for the red LED
@@ -162,10 +161,11 @@ for(val=0; val<255; val++)
  Serial.println(val, DEC);
 }
 ```
+![RGB LED](https://user-images.githubusercontent.com/70280105/132117858-1bbfbb87-dfa4-4b06-9e12-23f19dee9f36.png)
+
 https://user-images.githubusercontent.com/70280105/132246788-081b32aa-67a9-4069-90fa-c067f382fa5d.mp4
 
 ## Experment 7 - LDR Light Sensor
-![LDR Light Sensor](https://user-images.githubusercontent.com/70280105/132117799-b2757ef4-8eae-4785-830a-d3196ec44128.jpg)
 
 ### code
 ```int potpin=0;// initialize analog pin 0, connected with photovaristor
@@ -184,6 +184,9 @@ analogWrite(ledpin,val/4);// set up brightness（maximum value 255）
 delay(10);// wait for 0.01 
 }
 ```
+![LDR Light Sensor](https://user-images.githubusercontent.com/70280105/132117799-b2757ef4-8eae-4785-830a-d3196ec44128.jpg)
+
+https://user-images.githubusercontent.com/70280105/132772016-9fef96ca-05aa-4938-a853-d8363451b9dd.mp4
 
 ## Experment 8 - Flame Sensor
 
