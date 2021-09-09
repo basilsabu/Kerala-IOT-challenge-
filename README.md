@@ -366,6 +366,7 @@ irrecv.resume(); // Receive the next value
   }
 }
 ```
+https://user-images.githubusercontent.com/70280105/132767469-12b71cd1-78e7-4523-b229-30e30a9fe528.mp4
 
 ## Experment 11 - Potentiometer analog Value Reading
 
