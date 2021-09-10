@@ -7,6 +7,22 @@
 My name is Basil Sabu
 I am a second year BTech Electronics and Communication student studying at [College of Engineering Kidangooring](https://www.ce-kgr.org)
 
+## Experiment List
+Exp No       | List
+------------ | -------------
+1 |	LED Blinking
+2 |	Traffic Light
+3 |   LED Chasing
+4 |	Button controlled LED
+5 |   Buzzer
+6 |   RGB LED
+7 |   LDR Light sensor
+8 |   Flame sensor
+9 |   Temperature sensor
+10|   IR Remote control
+11|	Potentiometer Analog value reading
+12|   7 Segment display
+
 ## Experiment 1 - Hello World LED Blinking
 
 ### code
@@ -198,27 +214,33 @@ https://user-images.githubusercontent.com/70280105/132772016-9fef96ca-05aa-4938-
 ## Experment 8 - Flame Sensor
 
 ### code
-```int flame=0;// select analog pin 0 for the sensor
-int Beep=9;// select digital pin 9 for the buzzer
-int val=0;// initialize variable
- void setup() 
+```
+const int temperaturePin = 0;
+int buzzer = 12; 
+void setup()
 {
-  pinMode(Beep,OUTPUT);// set LED pin as “output”
- pinMode(flame,INPUT);// set buzzer pin as “input”
- Serial.begin(9600);// set baud rate at “9600”
- } 
-void loop() 
-{ 
-  val=analogRead(flame);// read the analog value of the sensor 
-  Serial.println(val);// output and display the analog value
-  if(val>=600)// when the analog value is larger than 600, the buzzer will buzz
-  {  
-   digitalWrite(Beep,HIGH); 
-   }else 
-   {  
-     digitalWrite(Beep,LOW); 
+	pinMode(buzzer, OUTPUT);
+	//set the pin connected to the buzzer as an output
+}
+
+void loop()
+{
+  	float voltage, degreesC;
+	voltage = getVoltage(temperaturePin);
+	degreesC = (voltage - 0.5) * 100.0;
+
+    if(degreesC>37)
+    {
+      digitalWrite(buzzer, HIGH);    
+      delay(500);  //delay half a second           
+      tone(12, 10000, 100);
     }
-   delay(500); 
+}
+
+float getVoltage(int pin)
+{
+  
+  return (analogRead(pin) * 0.004882814);
 }
 ```
 https://user-images.githubusercontent.com/70280105/132765022-f5c11092-09ed-46e3-9732-43ed9e2bfa2e.mp4
@@ -552,7 +574,16 @@ https://user-images.githubusercontent.com/70280105/132247575-3433d564-1d7c-4f61-
 
 ## IoT Challenge Assignments
 
-### Create a Thermometer using 6 LEDs and 1 LM35 Temperature Sensor
+### - Create a Thermometer using 6 LEDs and 1 LM35 Temperature Sensor
+
+### Hardware needed
+
+Component                    |Quantity
+---------------------------- | -------------
+UArduino UNO R3              |1
+LED                          |6
+100 Ω Resistor               |6
+Temperature Sensor [TMP36]   |1
 
 ## code
 ```
@@ -598,7 +629,17 @@ void loop()
 ```
 https://user-images.githubusercontent.com/70280105/132737294-b6aa1316-eec2-4b91-b9fd-dab1f5328c05.mp4
 
-### ? Create a Digital Dice using 7 Segment Display and Push Button
+## - Create a Digital Dice using 7 Segment Display and Push Button
+
+### Hardware needed
+
+Component                    |Quantity
+---------------------------- | -------------
+UArduino UNO R3              |1
+Cathode 7 Segment Display    |2
+220 Ω Resistor               |4
+Pushbutton                   |1
+
 
 ## code
 ```
