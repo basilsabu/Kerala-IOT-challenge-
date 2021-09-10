@@ -62,6 +62,8 @@ digitalWrite(redled, LOW);// turn off red LED
 
 ![Traffic Light](https://user-images.githubusercontent.com/70280105/131755398-e7cd6fd7-10be-4a5b-87c2-b43000f952f6.jpg)
 
+https://user-images.githubusercontent.com/70280105/132813637-7518cccc-da26-4d26-9842-4026e59c5d53.mp4
+
 ## Experiment 3 - LED Chasing Effect
 
 ### code
