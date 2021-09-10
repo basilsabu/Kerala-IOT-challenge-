@@ -402,6 +402,7 @@ val=analogRead(potpin);// read the analog value of analog pin 0, and assign it t
 Serial.println(val);// display val’s value
 }
 ```
+https://user-images.githubusercontent.com/70280105/132813805-347899f9-072f-42aa-b0c0-259422609fd1.mp4
 
 ## Experment 12 - 7 Segment Display
 
