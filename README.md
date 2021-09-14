@@ -26,8 +26,7 @@ Exp No       | List
 ## Experiment 1 - Hello World LED Blinking
 
 ### code
-```
-int ledPin = 10; // define digital pin 10.
+```int ledPin = 10; // define digital pin 10.
 void setup()
 {
 pinMode(ledPin, OUTPUT);// define pin with LED connected as output.
