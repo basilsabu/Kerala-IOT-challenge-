@@ -553,7 +553,7 @@ digital_9();// display number 9
 delay(1000); // wait for 1s
 }}
 ```
-
+![image](https://user-images.githubusercontent.com/70280105/133313893-ca76971a-1b61-45f9-97b1-12352a615f64.png)
 
 ## IoT Challenge Assignments
 
