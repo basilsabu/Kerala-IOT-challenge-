@@ -229,6 +229,7 @@ float getVoltage(int pin)
   return (analogRead(pin) * 0.004882814);
 }
 ```
+![image](https://user-images.githubusercontent.com/70280105/133314201-5250ff80-c122-4a32-8aa4-1a015063d093.png)
 
 ## Experment 9 - LM35 Temperature Sensor
 
