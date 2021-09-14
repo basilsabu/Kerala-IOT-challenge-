@@ -42,8 +42,6 @@ delay(1000); // wait for a second
 ```
 ![hello world](https://user-images.githubusercontent.com/70280105/131733910-0231fa02-ad37-44f9-9202-56519bfaa574.jpg)
 
-https://user-images.githubusercontent.com/70280105/132773374-fd0e298a-6638-4e04-a1d6-3237f50fcd59.mp4
-
 ## Experiment 2 - Traffic Light
 
 ### code
@@ -78,8 +76,6 @@ digitalWrite(redled, LOW);// turn off red LED
 
 ![Traffic Light](https://user-images.githubusercontent.com/70280105/131755398-e7cd6fd7-10be-4a5b-87c2-b43000f952f6.jpg)
 
-https://user-images.githubusercontent.com/70280105/132813637-7518cccc-da26-4d26-9842-4026e59c5d53.mp4
-
 ## Experiment 3 - LED Chasing Effect
 
 ### code
@@ -108,8 +104,6 @@ void loop()
 ```
 ![LED Chasing Effect](https://user-images.githubusercontent.com/70280105/131970500-139c6893-04d1-4e06-9de0-81385b943fd2.jpg)
 
-https://user-images.githubusercontent.com/70280105/132772254-72a55355-89f1-4e5a-bb67-bd74d476a023.mp4
-
 ## Experment 4 - Button Controlled LED
 
 ### code
@@ -133,8 +127,6 @@ else
 ```
 ![Button Controlled LED](https://user-images.githubusercontent.com/70280105/132117747-9a8ae0f6-1190-4aa2-8ea6-dc4b7a89860f.jpg)
 
-https://user-images.githubusercontent.com/70280105/132771756-983e767d-e4eb-4b8b-b4fd-7866f6126f31.mp4
-
 ## Experment 5 - Buzzer
 
 ### code
@@ -149,8 +141,6 @@ digitalWrite(buzzer, HIGH); // produce sound
 }
 ```
 ![Buzzer](https://user-images.githubusercontent.com/70280105/132118077-416d0941-d266-4012-93ed-2b64038c3542.png)
-
-https://user-images.githubusercontent.com/70280105/132246282-c3ca1ca3-ccd3-42f0-9dc3-a0805f8cc554.mp4
 
 ## Experment 6 - RGB LED
 
@@ -186,8 +176,6 @@ for(val=0; val<255; val++)
 ```
 ![RGB LED](https://user-images.githubusercontent.com/70280105/132117858-1bbfbb87-dfa4-4b06-9e12-23f19dee9f36.png)
 
-https://user-images.githubusercontent.com/70280105/132246788-081b32aa-67a9-4069-90fa-c067f382fa5d.mp4
-
 ## Experment 7 - LDR Light Sensor
 
 ### code
@@ -208,8 +196,6 @@ delay(10);// wait for 0.01
 }
 ```
 ![LDR Light Sensor](https://user-images.githubusercontent.com/70280105/132117799-b2757ef4-8eae-4785-830a-d3196ec44128.jpg)
-
-https://user-images.githubusercontent.com/70280105/132772016-9fef96ca-05aa-4938-a853-d8363451b9dd.mp4
 
 ## Experment 8 - Flame Sensor
 
@@ -243,7 +229,6 @@ float getVoltage(int pin)
   return (analogRead(pin) * 0.004882814);
 }
 ```
-https://user-images.githubusercontent.com/70280105/132765022-f5c11092-09ed-46e3-9732-43ed9e2bfa2e.mp4
 
 ## Experment 9 - LM35 Temperature Sensor
 
@@ -266,8 +251,6 @@ delay(500);// wait for 0.5 second
 }
 ```
 ![LM35 Temperature Sensor](https://user-images.githubusercontent.com/70280105/132118621-f9831e93-e978-4b4b-8776-9540c04e7ae0.png)
-
-https://user-images.githubusercontent.com/70280105/132246634-4bd39ac6-c081-4f4b-bd3b-f0f2048f836c.mp
 
 ## Experment 10 - IR Remote Control Using TSOP
 
@@ -401,7 +384,7 @@ irrecv.resume(); // Receive the next value
   }
 }
 ```
-https://user-images.githubusercontent.com/70280105/132767469-12b71cd1-78e7-4523-b229-30e30a9fe528.mp4
+
 
 ## Experment 11 - Potentiometer analog Value Reading
 
@@ -424,7 +407,7 @@ val=analogRead(potpin);// read the analog value of analog pin 0, and assign it t
 Serial.println(val);// display val’s value
 }
 ```
-https://user-images.githubusercontent.com/70280105/132813805-347899f9-072f-42aa-b0c0-259422609fd1.mp4
+
 
 ## Experment 12 - 7 Segment Display
 
@@ -570,7 +553,7 @@ digital_9();// display number 9
 delay(1000); // wait for 1s
 }}
 ```
-https://user-images.githubusercontent.com/70280105/132247575-3433d564-1d7c-4f61-8d52-7e469b559000.mp4
+
 
 ## IoT Challenge Assignments
 
@@ -627,7 +610,7 @@ void loop()
   delay(10);
 }
 ```
-https://user-images.githubusercontent.com/70280105/132737294-b6aa1316-eec2-4b91-b9fd-dab1f5328c05.mp4
+
 
 ## - Create a Digital Dice using 7 Segment Display and Push Button
 
@@ -992,4 +975,3 @@ void loop(void)
   }
 }
 ```
-https://user-images.githubusercontent.com/70280105/132725926-046ead14-3a54-43fb-bded-92066178e0ea.mp4
