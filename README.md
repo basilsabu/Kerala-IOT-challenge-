@@ -611,7 +611,7 @@ void loop()
   delay(10);
 }
 ```
-
+https://user-images.githubusercontent.com/70280105/132737294-b6aa1316-eec2-4b91-b9fd-dab1f5328c05.mp4
 
 ## - Create a Digital Dice using 7 Segment Display and Push Button
 
@@ -976,3 +976,4 @@ void loop(void)
   }
 }
 ```
+https://user-images.githubusercontent.com/70280105/132725926-046ead14-3a54-43fb-bded-92066178e0ea.mp4
