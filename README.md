@@ -4,8 +4,11 @@
 
 # About Me
 >Hello guyus..,
-My name is Basil Sabu
-I am a second year BTech Electronics and Communication student studying at [College of Engineering Kidangooring](https://www.ce-kgr.org)
+My name is **Basil Sabu**
+I am a second year BTech Electronics and Communication student studying at **[College of Engineering Kidangooring](https://www.ce-kgr.org)**
+
+# LEVEL 1
+
 
 ## Experiment List
 Exp No       | List
@@ -980,3 +983,91 @@ void loop(void)
 }
 ```
 https://user-images.githubusercontent.com/70280105/132725926-046ead14-3a54-43fb-bded-92066178e0ea.mp4
+
+
+
+---
+
+
+# LEVEL 2
+
+
+## Experiment List
+
+### Part A : Experiments Using Blynk IoT Platform
+
+Exp No       | List
+------------ | -------------
+1|  Hello World LED Program Using Blynk App
+2|  Push Button ON/OFF Status in Mobile App
+3|  Light Meter using a Progress Bar
+4|  Remote Soil Moisture Measurement 
+5|  IR Sensor Interfacing to Blynk App
+6|  Ultrasonic Distance Measurement 
+7|  Home Automation using Relay Module
+
+## Things Used
+
+1. 1 x ESP 32 Development Board
+2. 1 x HC-SR04 Ultrasonic Distance Sensor
+3. 1 x Soil Moisture Sensor
+4. 1 x IR Detection Module
+5. 1 x 2 Channel Relay Module (5 Volt)
+6. 6 X Female to Female Jumper 
+7. 6 X Male to Male Jumper 
+8. 1X Digital MultiMeter ( cheapest will work) (optional)
+9. 1 x Mini Tester or +/- mini screwdriver (optional)
+
+## Experiment 1 
+
+### code
+``` #include "thingProperties.h"
+
+void setup() {
+  // Initialize serial and wait for port to open:
+  pinMode(15,OUTPUT);
+  Serial.begin(9600);
+  // This delay gives the chance to wait for a Serial Monitor without blocking if none is found
+  delay(1500); 
+
+  // Defined in thingProperties.h
+  initProperties();
+
+  // Connect to Arduino IoT Cloud
+  ArduinoCloud.begin(ArduinoIoTPreferredConnection);
+  
+  /*
+     The following function allows you to obtain more information
+     related to the state of network and IoT Cloud connection and errors
+     the higher number the more granular information you’ll get.
+     The default is 0 (only errors).
+     Maximum is 4
+ */
+  setDebugMessageLevel(2);
+  ArduinoCloud.printDebugInfo();
+}
+
+void loop() {
+  ArduinoCloud.update();
+  // Your code here 
+  
+  
+}
+
+/*
+  Since LED1 is READ_WRITE variable, onLED1Change() is
+  executed every time a new value is received from IoT Cloud.
+*/
+void onLed1Change()  {
+  // Add your code here to act upon Led1 change
+  if(led1==HIGH)
+  {
+    digitalWrite(15,HIGH);
+  }
+    else
+    {
+      digitalWrite(15,LOW);
+    }
+  } ```
+  
+  
