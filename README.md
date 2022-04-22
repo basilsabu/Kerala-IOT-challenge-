@@ -1018,7 +1018,7 @@ Exp No       | List
 8. 1X Digital MultiMeter ( cheapest will work) (optional)
 9. 1 x Mini Tester or +/- mini screwdriver (optional)
 
-## Experiment 1 
+## Experiment 1   Hello World LED Program Using Blynk App
 
 ### code
 ``` #include "thingProperties.h"
@@ -1070,5 +1070,454 @@ void onLed1Change()  {
     }
   }
   ```
+  
+  
+  ## Experiment 2   Push Button ON/OFF Status in Mobile App
+  
+### code
+
+``` #include "thingProperties.h"
+
+void setup() {
+  // Initialize serial and wait for port to open:
+  pinMode(15,OUTPUT);
+  Serial.begin(9600);
+  // This delay gives the chance to wait for a Serial Monitor without blocking if none is found
+  delay(1500); 
+
+  // Defined in thingProperties.h
+  initProperties();
+
+  // Connect to Arduino IoT Cloud
+  ArduinoCloud.begin(ArduinoIoTPreferredConnection);
+  
+  /*
+     The following function allows you to obtain more information
+     related to the state of network and IoT Cloud connection and errors
+     the higher number the more granular information you’ll get.
+     The default is 0 (only errors).
+     Maximum is 4
+ */
+  setDebugMessageLevel(2);
+  ArduinoCloud.printDebugInfo();
+}
+
+void loop() {
+  ArduinoCloud.update();
+ 
+}
+
+/*
+  Since LED1 is READ_WRITE variable, onLED1Change() is
+  executed every time a new value is received from IoT Cloud.
+*/
+void onLed1Change()  {
+  // Add your code here to act upon Led1 change
+  if(led1==HIGH)
+  {
+    digitalWrite(15,HIGH);
+  }
+    else
+    {
+      digitalWrite(15,LOW);
+    }
+  }
+
+```
+
+
+## Experiment 3  Light Meter using a Progress Bar
+
+### code
+
+```
+#include "thingProperties.h"
+
+void setup() {
+  // Initialize serial and wait for port to open:
+  pinMode(15,OUTPUT);
+  Serial.begin(9600);
+  // This delay gives the chance to wait for a Serial Monitor without blocking if none is found
+  delay(1500); 
+
+  // Defined in thingProperties.h
+  initProperties();
+
+  // Connect to Arduino IoT Cloud
+  ArduinoCloud.begin(ArduinoIoTPreferredConnection);
+  
+  /*
+     The following function allows you to obtain more information
+     related to the state of network and IoT Cloud connection and errors
+     the higher number the more granular information you’ll get.
+     The default is 0 (only errors).
+     Maximum is 4
+ */
+  setDebugMessageLevel(2);
+  ArduinoCloud.printDebugInfo();
+}
+
+void loop() {
+  ArduinoCloud.update();
+ 
+}
+
+/*
+  Since LED1 is READ_WRITE variable, onLED1Change() is
+  executed every time a new value is received from IoT Cloud.
+*/
+void onLed1Change()  {
+  // Add your code here to act upon Led1 change
+  if(led1==HIGH)
+  {
+    digitalWrite(15,HIGH);
+  }
+    else
+    {
+      digitalWrite(15,LOW);
+    }
+  }
+```
+
+
+
+## Experiment 4  Remote Soil Moisture Measurement 
+
+### code
+
+```
+#include "thingProperties.h"
+
+void setup() {
+  // Initialize serial and wait for port to open:
+  pinMode(15,OUTPUT);
+  Serial.begin(9600);
+  // This delay gives the chance to wait for a Serial Monitor without blocking if none is found
+  delay(1500); 
+
+  // Defined in thingProperties.h
+  initProperties();
+
+  // Connect to Arduino IoT Cloud
+  ArduinoCloud.begin(ArduinoIoTPreferredConnection);
+  
+  /*
+     The following function allows you to obtain more information
+     related to the state of network and IoT Cloud connection and errors
+     the higher number the more granular information you’ll get.
+     The default is 0 (only errors).
+     Maximum is 4
+ */
+  setDebugMessageLevel(2);
+  ArduinoCloud.printDebugInfo();
+}
+
+void loop() {
+  ArduinoCloud.update();
+ 
+}
+
+/*
+  Since LED1 is READ_WRITE variable, onLED1Change() is
+  executed every time a new value is received from IoT Cloud.
+*/
+void onLed1Change()  {
+  // Add your code here to act upon Led1 change
+  if(led1==HIGH)
+  {
+    digitalWrite(15,HIGH);
+  }
+    else
+    {
+      digitalWrite(15,LOW);
+    }
+  }
+```
+
+
+## Experiment 5   Ultrasonic Distance Measurement using Arduino
+
+
+### code
+
+```
+const int trigPin = 5;
+const int echoPin = 18;
+
+//define sound speed in cm/uS
+#define SOUND_SPEED 0.034
+#define CM_TO_INCH 0.393701
+
+long duration;
+float distanceCm;
+float distanceInch;
+
+void setup() {
+  Serial.begin(115200); // Starts the serial communication
+  pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
+  pinMode(echoPin, INPUT); // Sets the echoPin as an Input
+}
+
+void loop() {
+  // Clears the trigPin
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  // Sets the trigPin on HIGH state for 10 micro seconds
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  // Reads the echoPin, returns the sound wave travel time in microseconds
+  duration = pulseIn(echoPin, HIGH);
+  
+  // Calculate the distance
+  distanceCm = duration * SOUND_SPEED/2;
+  
+  // Convert to inches
+  distanceInch = distanceCm * CM_TO_INCH;
+  
+  // Prints the distance in the Serial Monitor
+  Serial.print("Distance (cm): ");
+  Serial.println(distanceCm);
+  Serial.print("Distance (inch): ");
+  Serial.println(distanceInch);
+  
+  delay(1000);
+}
+```
+
+### using esp 32
+
+
+### code
+
+```
+const int trigPin = 5;
+const int echoPin = 18;
+
+//define sound speed in cm/uS
+#define SOUND_SPEED 0.034
+#define CM_TO_INCH 0.393701
+
+long duration;
+float distanceCm;
+float distanceInch;
+
+void setup() {
+  Serial.begin(115200); // Starts the serial communication
+  pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
+  pinMode(echoPin, INPUT); // Sets the echoPin as an Input
+}
+
+void loop() {
+  // Clears the trigPin
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  // Sets the trigPin on HIGH state for 10 micro seconds
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  // Reads the echoPin, returns the sound wave travel time in microseconds
+  duration = pulseIn(echoPin, HIGH);
+  
+  // Calculate the distance
+  distanceCm = duration * SOUND_SPEED/2;
+  
+  // Convert to inches
+  distanceInch = distanceCm * CM_TO_INCH;
+  
+  // Prints the distance in the Serial Monitor
+  Serial.print("Distance (cm): ");
+  Serial.println(distanceCm);
+  Serial.print("Distance (inch): ");
+  Serial.println(distanceInch);
+  
+  delay(1000);
+}
+```
+
+
+## ASSIGNMENT 1
+
+
+
+
+## code 
+
+
+```
+#include "thingProperties.h"
+const int trigPin = 5;
+const int echoPin = 18;
+
+#define SOUND_SPEED 0.034
+#define CM_TO_INCH 0.393701
+
+long duration;
+float distanceCm;
+float distanceInch;
+
+void setup() {
+  // Initialize serial and wait for port to open:
+  pinMode(0,OUTPUT);
+  Serial.begin(9600);
+  // This delay gives the chance to wait for a Serial Monitor without blocking if none is found
+  delay(1500); 
+
+  // Defined in thingProperties.h
+  initProperties();
+
+  // Connect to Arduino IoT Cloud
+  ArduinoCloud.begin(ArduinoIoTPreferredConnection);
+  
+  /*
+     The following function allows you to obtain more information
+     related to the state of network and IoT Cloud connection and errors
+     the higher number the more granular information you’ll get.
+     The default is 0 (only errors).
+     Maximum is 4
+ */
+  setDebugMessageLevel(2);
+  ArduinoCloud.printDebugInfo();
+  
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+}
+
+
+void loop() {
+  ArduinoCloud.update();
+  
+  
+
+  
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+    duration = pulseIn(echoPin, HIGH);
+  
+  distanceCm = duration * SOUND_SPEED/2;
+    
+  Serial.print("Distance (cm): ");
+  Serial.println(distanceCm);
+  
+  delay(1000);
+}
+```
+
+
+## Experiment 1Experiment 6  Object Detection using IR Sensor
+
+
+### code 
+
+```
+int IRSensor = 2; // connect ir sensor to arduino pin 7
+int led = 13;
+void setup() 
+{
+  pinMode (IRSensor, INPUT); // sensor pin INPUT
+  pinMode (led, OUTPUT);
+  Serial.begin(9600); // open the serial port at 9600 bps:
+}
+
+void loop()
+{
+  int statusSensor = digitalRead (IRSensor);
+  
+  if (statusSensor == 1){
+    Serial.print("HIGH-   No Obstacle/Black Surface\n"); 
+    digitalWrite(led, HIGH);
+  }
+  else{
+    Serial.print("LOW-    Obstacle Detected/White Surface\n"); 
+    digitalWrite(led, LOW);
+  }
+  
+}
+```
+
+
+
+## Experiment 7  MIT App Inventor + ESP 32
+
+
+
+
+
+
+
+## Experiment 8 Bidirectional Communication(Part2)
+
+
+
+
+
+
+
+## Experiment 9  Creating a Reliable Communication (Part 3)
+
+
+
+
+
+
+
+## Experiment 10  ESP32 + Firebase
+
+
+
+
+
+
+
+## Experiment 11  MQTT Protocol
+
+
+
+
+
+
+
+
+## Experiment 12  Node-RED and MQTT Broker Installation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
   
   
